@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  spring-restful-api-postgres:
+    container_name: "book-catalog-postgres"
+    image: postgres:latest
+    ports:
+      - 8070:5432
+    environment:
+      POSTGRES_PASSWORD: imam
+      POSTGRES_USER: imam
+      POSTGRES_DB: book_catalog

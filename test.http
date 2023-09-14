@@ -1,0 +1,100 @@
+### Create product
+POST http://localhost:8090/v1/publisher
+Content-Type: application/json
+Accept: application/json
+
+{
+  "publisher_name": "Ducati",
+  "company_name": "PT. Ducati",
+  "address": "Gedung Kompas Ducati Unit 1 Lanta 2"
+}
+
+### UPDATE PUBLISHER
+
+PUT http://localhost:8090/v1/publisher/86b665cc-75c9-4b7b-ac13-082ec42de884
+Content-Type: application/json
+Accept: application/json
+
+{
+  "publisher_name": "penerbit gramedia"
+}
+
+
+### get publisher list
+GET http://localhost:8090/v1/publisher
+Content-Type: application/json
+#Accept: application/json
+Authorization: Basic user 9c6c6fd1-54ff-4d8c-b32d-2b1a1138c352
+
+
+
+###
+GET http://localhost:8090/v1/publisher?pages=0&limit=5&publisherName=Si
+#Content-Type: application/json
+Accept: application/json
+
+### Create category
+POST http://localhost:8090/v1/category
+Content-Type: application/json
+Accept: application/json
+
+{
+  "code": "fic",
+  "name": "fiction",
+  "description": "buku fiksi luar biasa"
+}
+
+
+### get category
+GET http://localhost:8090/v1/category
+Content-Type: application/json
+#Accept: application/json
+
+//{
+//  "code": "fic",
+//  "name": "fiction",
+//  "description": "buku fiksi luar biasa"
+//}
+
+
+### Create author
+POST http://localhost:8090/v1/author
+Content-Type: application/json
+Accept: application/json
+
+[
+  {
+    "author_name": "conai",
+    "birth_date": 7868
+  },
+  {
+    "author_name": "jiba",
+    "birth_date": 7862
+  },
+  {
+    "author_name": "uyay",
+    "birth_date": 7862
+  },
+  {
+    "author_name": "najib",
+    "birth_date": 78342
+  },
+  {
+    "author_name": "urad",
+    "birth_date": 7812
+  },
+  {
+    "author_name": "penang",
+    "birth_date": 78122
+  },
+  {
+    "author_name": "rusdi",
+    "birth_date": 1232
+  }
+]
+
+
+###
+
+GET http://localhost:8090/v1/author/63d27a3f-773a-4079-91d0-17620a12f59a/detail
+Content-Type: application/json
